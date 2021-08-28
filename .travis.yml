@@ -3,21 +3,29 @@ services:
   - docker
 
 before_install:
-  - docker build -f ./client/dockerfile.dev -t mo29172/client ./client
+  - docker build -f ./client/dockerfile.dev -t mo29172/client-test ./client
 script:
-  - docker run -e CI=true mo29172/client npm run test
+  - docker run -e CI=true mo29172/client-test npm run test
 
-after_install:
+after_success:
+  - docker build -f ./nginx/Dockerfile -t mo29172/nginx ./nginx
+  - docker build -f ./server/Dockerfile -t mo29172/server ./server
+  - docker build -f ./worker/Dockerfile -t mo29172/worker ./worker
+  - docker build -f ./client/Dockerfile -t mo29172/client ./client
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker push mo29172/client
+  - docker push mo29172/worker
+  - docker push mo29172/server
+  - docker push mo29172/nginx
 
-
-deploy:
-  provider: elasticbeanstalk
-  region: "eu-west"
-  app: ""
-  env: ""
-  bucket_name: ""
-  bucket_path: ""
-  on:
-    branch: master
-  access_key_id: 
-  secret_access_key: 
+# deploy:
+#   provider: elasticbeanstalk
+#   region: "eu-west"
+#   app: ""
+#   env: ""
+#   bucket_name: ""
+#   bucket_path: ""
+#   on:
+#     branch: master
+#   access_key_id: 
+#   secret_access_key: 
