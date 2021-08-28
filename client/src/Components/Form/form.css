@@ -1,0 +1,9 @@
+.form_wrapper {
+    border: 1px solid;
+    min-width: 600px;
+    padding: 20px;
+}
+form {
+    display: flex;
+    justify-content: space-between;
+}
