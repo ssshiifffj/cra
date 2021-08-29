@@ -5,8 +5,9 @@ class Footer extends Component {
 
     render() {
         return (
-            <div className={"footer_wrapper"}>
+            <div className={"footer_wrapper"} >
                 <h1>Fib Calculator</h1>
+                <div data-testid="apptest">hola</div>
             </div>
         )
     }

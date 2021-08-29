@@ -45,7 +45,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app_wrapper">
+      <div className="app_wrapper" >
           <Footer />
           <Form fetchCalculated={this.fetchCalculated} fetchIndexes={this.fetchIndexes}/>
           <Pg seen={this.state.seen}/>
