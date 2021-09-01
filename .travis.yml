@@ -18,14 +18,14 @@ after_success:
   - docker push mo29172/server
   - docker push mo29172/nginx
 
-# deploy:
-#   provider: elasticbeanstalk
-#   region: "eu-west"
-#   app: ""
-#   env: ""
-#   bucket_name: ""
-#   bucket_path: ""
-#   on:
-#     branch: master
-#   access_key_id: 
-#   secret_access_key: 
+deploy:
+  provider: elasticbeanstalk
+  region: "eu-west-3"
+  app: "cra"
+  env: "Cra-env"
+  bucket_name: "cra"
+  bucket_path: "elasticbeanstalk-eu-west-3-661517513609"
+  on:
+    branch: master
+  access_key_id: "$first"
+  secret_access_key: "$second"
