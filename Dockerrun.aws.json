@@ -22,8 +22,21 @@
           "name": "postgres",
           "image": "postgres",
           "hostname": "postgres",
-          "essential": false
-          
+          "essential": false,
+          "environment": [
+             {
+                "name": "POSTGRES_USER",
+                "value": "user"
+             },
+             {
+                "name": "POSTGRES_PASSWORD",
+                "value": "user"
+             },
+             {
+                "name": "POSTGRES_DB",
+                "value": "db"
+             }
+          ]
        },
        {
           "name": "redis",
