@@ -5,27 +5,27 @@
           "name":"client",
           "image":"mo29172/client",
           "hostname":"client",
-          "memory": 56,
+          "memory": 500,
           "essential":false
        },
        {
           "name":"server",
           "image":"mo29172/server",
           "hostname":"api",
-          "memory": 56,
+          "memory": 500,
           "essential":false
        },
        {
           "name":"worker",
           "image":"mo29172/worker",
-          "memory": 56,
+          "memory": 500,
           "essential":false
        },
        {
           "name": "postgres",
           "image": "postgres",
           "hostname": "postgres",
-          "memory": 56,
+          "memory": 500,
           "essential": false,
           "environment": [
              {
@@ -46,13 +46,13 @@
           "name": "redis",
           "image": "redis",
           "hostname": "redis",
-          "memory": 56,
+          "memory": 500,
           "essential": false
        },
        {
           "name":"nginx",
           "image":"mo29172/nginx",
-          "memory": 56,
+          "memory": 500,
           "essential":true,
           "portMappings":[
              {
