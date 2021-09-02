@@ -12,7 +12,7 @@
           "name":"server",
           "image":"mo29172/server",
           "hostname":"api",
-          "memory": 128,
+          "memory": 256,
           "essential":false
        },
        {
@@ -25,7 +25,7 @@
           "name": "postgres",
           "image": "postgres",
           "hostname": "postgres",
-          "memory": 128,
+          "memory": 256,
           "essential": false,
           "environment": [
              {
