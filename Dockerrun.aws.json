@@ -12,13 +12,13 @@
           "name":"server",
           "image":"mo29172/server",
           "hostname":"api",
-          "memory": 50,
+          "memory": 60,
           "essential":false
        },
        {
           "name":"worker",
           "image":"mo29172/worker",
-          "memory": 50,
+          "memory": 60,
           "essential":false
        },
        {
@@ -46,7 +46,7 @@
           "name": "redis",
           "image": "redis",
           "hostname": "redis",
-          "memory": 30,
+          "memory": 50,
           "essential": false
        },
        {
