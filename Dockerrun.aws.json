@@ -46,7 +46,7 @@
           "name": "redis",
           "image": "redis",
           "hostname": "redis",
-          "memory": 90,
+          "memory": 40,
           "essential": false
        },
        {
