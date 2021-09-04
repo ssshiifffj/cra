@@ -52,7 +52,7 @@
        {
           "name":"nginx",
           "image":"mo29172/nginx",
-          "memory": 90,
+          "memory": 40,
           "essential":true,
           "portMappings":[
              {
