@@ -25,7 +25,7 @@
           "name": "postgres",
           "image": "postgres",
           "hostname": "postgres",
-          "memory": 90,
+          "memory": 200,
           "essential": false,
           "environment": [
              {
@@ -46,13 +46,13 @@
           "name": "redis",
           "image": "redis",
           "hostname": "redis",
-          "memory": 40,
+          "memory": 200,
           "essential": false
        },
        {
           "name":"nginx",
           "image":"mo29172/nginx",
-          "memory": 40,
+          "memory": 90,
           "essential":true,
           "portMappings":[
              {
