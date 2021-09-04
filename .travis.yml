@@ -22,7 +22,7 @@ deploy:
   provider: elasticbeanstalk
   region: "eu-west-3"
   app: "craa"
-  env: "Craa-env"
+  env: "Craa-env-1"
   bucket_name: "elasticbeanstalk-eu-west-3-661517513609"
   bucket_path: "craa"
   on:
