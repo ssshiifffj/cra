@@ -12,7 +12,7 @@
           "name":"server",
           "image":"mo29172/server",
           "hostname":"api",
-          "memory": 90,
+          "memory": 200,
           "essential":false
        },
        {
