@@ -39,18 +39,19 @@
          "essential":false
       },
       {
-         "name":"worker",
-         "image":"mo29172/worker",
-         "memory": 20,
-         "essential":false
-      },
-       {
          "name":"server",
          "image":"mo29172/server",
          "hostname":"api",
          "memory": 128,
          "essential":false
       },
+      {
+         "name":"worker",
+         "image":"mo29172/worker",
+         "memory": 80,
+         "essential":false
+      },
+      
      
        {
           "name":"nginx",
