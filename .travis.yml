@@ -13,10 +13,10 @@ after_success:
   - docker build -f ./worker/Dockerfile -t mo29172/worker ./worker
   - docker build -f ./client/Dockerfile -t mo29172/client ./client
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push mo29172/client
-  - docker push mo29172/worker
-  - docker push mo29172/server
-  - docker push mo29172/nginx
+  - docker push mo29172/client:latest
+  - docker push mo29172/worker:latest
+  - docker push mo29172/server:latest
+  - docker push mo29172/nginx:latest
 
 deploy:
   provider: elasticbeanstalk
