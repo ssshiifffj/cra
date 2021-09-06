@@ -1,6 +1,13 @@
 {
     "AWSEBDockerrunVersion":2,
     "containerDefinitions":[
+      {
+         "name":"server",
+         "image":"mo29172/server",
+         "hostname":"api",
+         "memoryReservation": 128,
+         "essential":true
+      },
        {
           "name": "postgres",
           "image": "postgres",
@@ -36,13 +43,7 @@
          "memory": 20,
          "essential":false
       },
-      {
-         "name":"server",
-         "image":"mo29172/server",
-         "hostname":"api",
-         "memoryReservation": 128,
-         "essential":false
-      },
+    
       {
          "name":"worker",
          "image":"mo29172/worker",
