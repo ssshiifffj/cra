@@ -12,7 +12,7 @@
           "name": "postgres",
           "image": "postgres",
           "hostname": "postgres",
-          "memory": 20,
+          "memory": 128,
           "essential": false,
           "environment": [
              {
@@ -33,14 +33,14 @@
           "name": "redis",
           "image": "redis",
           "hostname": "redis",
-          "memory": 20,
+          "memory": 90,
           "essential": false
        },
        {
          "name":"client",
          "image":"mo29172/client",
          "hostname":"client",
-         "memory": 20,
+         "memory": 90,
          "essential":false
       },
     
