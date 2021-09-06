@@ -6,7 +6,7 @@
          "image":"mo29172/server",
          "hostname":"api",
          "memory": 128,
-         "essential":true
+         "essential":false
       },
        {
           "name": "postgres",
