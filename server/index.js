@@ -24,7 +24,7 @@ pgClient.on('error', ()=> console.log('Lost PG connection'));
 
 pgClient
 .query('CREATE TABLE IF NOT EXISTS values (number INT)')
-.catch((err) => console.log(err.message))
+.catch((err) => console.log("error: ",err.message))
 
 
 //Redis Client Setup
