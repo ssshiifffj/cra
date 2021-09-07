@@ -42,7 +42,8 @@
          "name":"worker",
          "image":"mo29172/worker",
          "memory": 90,
-         "essential":false
+         "essential":false,
+         "links": ["redis"]
       },
       {
          "name":"server",
