@@ -60,7 +60,6 @@ app.get('/values/redis', (req, res) => {
 })
 
 app.post('/values', (req, res) => {
-    alert('post executed');
     const index = req.body.index;
     if (parseInt(index) > 40) {
         return res.status(422).send('Index too high');
